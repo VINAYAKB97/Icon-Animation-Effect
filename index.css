@@ -1,0 +1,60 @@
+*{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(52, 50, 50);
+}
+main{
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container > div > img {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.container > div > .NAME {
+    position: absolute;
+    z-index: -1; 
+    color: white;
+}  
+
+.container > div:hover .NAME{
+    position: relative;
+    animation: jump linear 0.5s;
+}
+
+@keyframes jump{
+    0%{
+        top:10px;
+    }
+    50%{
+        top: -30px;
+    }
+    80%{
+        top: 10px;
+    }
+    90%{
+        top: -1px;
+    }
+    100%{
+        top: 10px;
+    }
+}
